@@ -52,3 +52,5 @@ for tweet in tweepy.Cursor(api.search, q='#ocean').items():
 
     except StopIteration:
         break
+        
+client.login(process.env.BOT_TOKEN);
