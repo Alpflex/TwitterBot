@@ -4,5 +4,9 @@
   "version": "0.0.0",
   "main": "TwitterBot.py",
   "scripts": {
-    "start": "node TwitterBot.py"
+    "start": "node bot.js"
   },
+  "dependencies": {
+    "discord.js": "11.1.0",
+  }
+}
