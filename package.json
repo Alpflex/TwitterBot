@@ -1,0 +1,8 @@
+{
+  "name": "Test",
+  "description": "Test",
+  "version": "0.0.0",
+  "main": "TwitterBot.py",
+  "scripts": {
+    "start": "node TwitterBot.py"
+  },
