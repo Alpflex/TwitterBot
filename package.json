@@ -3,7 +3,4 @@
   "description": "Test",
   "version": "0.1.0",
   "main": "TwitterBot.py",
-  "scripts": {
-    "start": "node bot.js"
   },
- 
