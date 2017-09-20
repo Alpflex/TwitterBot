@@ -1,1 +1,1 @@
-worker: node TwitterBot.py
+worker: python TwitterBot.py
