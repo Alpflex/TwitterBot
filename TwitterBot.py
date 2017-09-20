@@ -45,7 +45,7 @@ for tweet in tweepy.Cursor(api.search, q='#ocean').items():
         tweet.retweet()
         print('Retweeted the tweet')
 
-        time.sleep(10)
+        time.sleep(60)
 
     except tweepy.TweepError as e:
         print(e.reason)
