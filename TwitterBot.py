@@ -35,7 +35,7 @@ api = tweepy.API(auth)
 #    time.sleep(1)#Tweet every 15 minutes
 
 
-#api.update_status(status="")d
+#api.update_status(status="")
 
 
 #def search_tweets(ifnskola, count=100):
@@ -98,7 +98,7 @@ for tweet in tweepy.Cursor(api.search, q="#svpol").items():
         tweet.user.follow()
         print('Followed the user')
 
-        time.sleep(10)  # take a sleep for in sec
+        time.sleep(86400)  # take a sleep for in sec
 
     except tweepy.TweepError as e:
         print(e.reason)  # if cant Retweet tweets, print the reason
