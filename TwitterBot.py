@@ -3,7 +3,9 @@
 
 #tweepy is the library we will be using to access the Twitter API
 
-import tweepy, time, sys
+import tweepy
+import time
+import sys
 import random
 from tweepy import Stream
 from tweepy import OAuthHandler
@@ -82,8 +84,8 @@ for tweet in tweepy.Cursor(api.search, q="#svpol").items():
         print('\nTweet by: @' + tweet.user.screen_name)
 
         # Retweet tweets as they are found
-        #tweet.retweet()
-        #print('Retweeted the tweet')
+        tweet.retweet()
+        print('Retweeted the tweet')
 
 
         #tweet = api.user_timeline(id=api.user_timeline, count=1)[0]
