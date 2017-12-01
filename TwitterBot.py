@@ -35,7 +35,7 @@ api = tweepy.API(auth)
 #    time.sleep(1)#Tweet every 15 minutes
 
 
-#api.update_status(status="")
+#api.update_status(status="")d
 
 
 #def search_tweets(ifnskola, count=100):
