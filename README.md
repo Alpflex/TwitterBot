@@ -31,21 +31,15 @@ You will also need to create an app account on https://dev.twitter.com/apps
 
 Before running the bot, you must first set it up so it can connect to the Twitter API. Create a config.txt file and fill in the following information:
 
-    OAUTH_TOKEN:
-    OAUTH_SECRET:
-    CONSUMER_KEY:
-    CONSUMER_SECRET:
-    TWITTER_HANDLE:
-    ALREADY_FOLLOWED_FILE:already-followed.txt
-    FOLLOWERS_FILE:followers.txt
-    FOLLOWS_FILE:following.txt
-    USERS_KEEP_FOLLOWING:
-    USERS_KEEP_UNMUTED:
-    USERS_KEEP_MUTED:
-    FOLLOW_BACKOFF_MIN_SECONDS:10
-    FOLLOW_BACKOFF_MAX_SECONDS:60
+    CONSUMER_KEY = ' '
+    CONSUMER_SECRET = ' '
+    ACCESS_TOKEN_KEY = ' '
+    ACCESS_TOKEN_SECRET = 
+    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
+    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
+    api = tweepy.API(auth)
 
-OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET are your API keys that you received from creating your app account. TWITTER_HANDLE is your Twitter name, case-sensitive.
+CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET are your API keys that you received from creating your app account. Is your Twitter name, case-sensitive.
 
 You can change the FILE entries if you want to store that information in a specific location on your computer. By default, the files will be created in your current directory.
 
