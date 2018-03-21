@@ -18,8 +18,9 @@ git clone https://github.com/Alpflex/TwitterBot.git
 ```
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will also need to create an app account on https://dev.twitter.com/apps
 
-```
-Give examples
-```
+    Sign in with your Twitter account
+    Create a new app account
+    Modify the settings for that app account to allow read & write
+    Generate a new OAuth token with those permissions
