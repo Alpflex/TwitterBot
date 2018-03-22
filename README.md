@@ -29,33 +29,43 @@ You will also need to create an app account on https://dev.twitter.com/apps
 ## Usage
 ### Configuring the bot
 
+First you need to open the TwitterBot.py file and start edit some code. 
+
 Before running the bot, you must first set it up so it can connect to the Twitter API. Create a config.txt file and fill in the following information:
 
     CONSUMER_KEY = ' '
     CONSUMER_SECRET = ' '
     ACCESS_TOKEN_KEY = ' '
     ACCESS_TOKEN_SECRET = 
-    auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
-    auth.set_access_token(ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET)
-    api = tweepy.API(auth)
 
 CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET are your API keys that you received from creating your app account. Is your Twitter name, case-sensitive.
 
-You can change the FILE entries if you want to store that information in a specific location on your computer. By default, the files will be created in your current directory.
+### Edit
 
-Add comma-separated Twitter user IDs to the USERS_KEEP entries to:
 
-    USERS_KEEP_FOLLOWING: Keep following these users even if they don't follow you back.
+    while True:
+        for tweet in tweepy.Cursor(api.user_timeline, id=USER_ID).items(1):
+            try:
+                while True:
+                    print(tweet)
+                    tweet.retweet()
+                    time.sleep(1)  # take a sleep for in sec
 
-    USERS_KEEP_UNMUTED: Keep these users unmuted (i.e., you receive a mobile notification when they tweet)
+            except tweepy.TweepError as e:
+                print(e.reason)  # if cant Retweet tweets, print the reason
 
-    USERS_KEEP_MUTED: Keep these users muted (i.e., you don't receive a mobile notification when they tweet)
+            except StopIteration:
+                break
 
-For example:
+You can look up a users' Twitter ID [here](http://tweeterid.com/).
+Change "USER_ID" at the first line of code to your desire users id.
 
-    ...
-    FOLLOWS_FILE:following.txt
-    USERS_KEEP_FOLLOWING:1234,1235,1236
-    USERS_KEEP_UNMUTED:
-    ...
+### Finished
+
+When you are finished with the code you can start hosting the bot.
+
+    
+## Have questions? Need help with the bot Or Want to improve it??
+
+If you're having issues with or have questions about the bot, [file an issue](https://github.com/rhiever/TwitterFollowBot/issues) in this repository so one of the project managers can get back to you. **Please [check the existing (and closed) issues](https://github.com/rhiever/TwitterFollowBot/issues?q=is%3Aissue) to make sure your issue hasn't already been addressed.**
 
