@@ -67,4 +67,4 @@ When you are finished with the code you can start hosting the bot.
     
 ## Have questions? Need help with the bot Or Want to improve it??
 
-If you're having issues with or have questions about the bot, 
+If you're having issues with or have questions about the bot, file an issue](https://github.com/Alpflex/TwitterBot/issues) in this repository so one of the project managers can get back to you. **Please [check the existing (and closed) issues](https://github.com/Alpflex/TwitterBot/issues?q=is%3Aissue) to make sure your issue hasn't already been addressed.**
