@@ -57,7 +57,7 @@ CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET are your AP
             except StopIteration:
                 break
 
-You can look up a users' Twitter ID [here](http://tweeterid.com/).
+You can look up a users' Twitter ID [here](mytwitterid.com).
 Change "USER_ID" at the first line of code to your desire users id.
 
 ### Finished
@@ -67,5 +67,4 @@ When you are finished with the code you can start hosting the bot.
     
 ## Have questions? Need help with the bot Or Want to improve it??
 
-If you're having issues with or have questions about the bot, [file an issue](https://github.com/rhiever/TwitterFollowBot/issues) in this repository so one of the project managers can get back to you. **Please [check the existing (and closed) issues](https://github.com/rhiever/TwitterFollowBot/issues?q=is%3Aissue) to make sure your issue hasn't already been addressed.**
-
+If you're having issues with or have questions about the bot, 
