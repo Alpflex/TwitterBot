@@ -57,7 +57,7 @@ CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET are your AP
             except StopIteration:
                 break
 
-You can look up a users' Twitter ID [here](mytwitterid.com).
+You can look up a users' Twitter ID [here](http://mytwitterid.com/).
 Change "USER_ID" at the first line of code to your desire users id.
 
 ### Finished
