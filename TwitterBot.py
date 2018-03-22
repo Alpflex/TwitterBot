@@ -1,14 +1,15 @@
 # !/usr/bin/env python
-# -*- coding: utf-8 -*-
+#coding: utf-8
 
 #tweepy is the library we will be using to access the Twitter API
 
-import tweepy, time, sys
+import tweepy
+import time
+import sys
 import random
 from tweepy import Stream
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
-
 import csv
 
 
@@ -35,7 +36,6 @@ api = tweepy.API(auth)
 #    time.sleep(1)#Tweet every 15 minutes
 
 
-
 #api.update_status(status="")
 
 
@@ -55,16 +55,14 @@ for follower in tweepy.Cursor(api.search, q="#skoldag").items():
     time.sleep(0.5)  # take a sleep for in sec
 
 """
-"""
-var = 1
-while var == 1:
-    for tweet in tweepy.Cursor(api.user_timeline, id=25073877).items(1):
+
+while True:
+    for tweet in tweepy.Cursor(api.user_timeline, id=USER_ID).items(1):
         try:
-            var = 1
-            while var == 1:
+            while True:
                 print(tweet)
                 tweet.retweet()
-                time.sleep(2)  # take a sleep for in sec
+                time.sleep(1)  # take a sleep for in sec
 
         except tweepy.TweepError as e:
             print(e.reason)  # if cant Retweet tweets, print the reason
@@ -74,9 +72,6 @@ while var == 1:
 
 
 """
-
-
-
 for tweet in tweepy.Cursor(api.search, q="#svpol").items():
     try:
         # Add \n escape character to print() to organize tweets
@@ -99,10 +94,11 @@ for tweet in tweepy.Cursor(api.search, q="#svpol").items():
         tweet.user.follow()
         print('Followed the user')
 
-        time.sleep(10)  # take a sleep for in sec
+        time.sleep(5)  # take a sleep for in sec
 
     except tweepy.TweepError as e:
         print(e.reason)  # if cant Retweet tweets, print the reason
 
     except StopIteration:
         break
+"""
